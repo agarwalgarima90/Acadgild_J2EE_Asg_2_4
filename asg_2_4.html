@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Assignment 2_4 </title>
+		<script>
+			//Function for CLick Event
+			function clickEvent() {
+				alert("Click event generated on button click");
+			}
+			
+			//Function for Blur Event
+			function blurEvent() {
+				alert("Blur event generated on text box");
+			}
+			
+			//Function for Error Event
+			function errorEvent() {
+				alert("Error event generated on image load.");
+			}
+			
+			//Function for load Event
+			function loadEvent() {
+				alert("Load event generated on page load.");
+			}
+			
+			//Function for submit Event
+			function submitEvent() {
+				alert("Submit event generated on form submission.");
+			}
+		</script>
+	</head>
+	<body onload="loadEvent()">
+		<div>
+			<p> Demonstartion for onClick Event. Click the button. </p>
+			<button onclick="clickEvent()"> Click Me </button>
+		</div>
+		<div>
+			<p> Demonstartion for onBlur Event. Remove the pointer from text box. </p>
+			<input type="text" onBlur="blurEvent()"/>
+		</div>
+		<div>
+			<p> Demonstartion for onError Event. Triggered as image fails to load. </p>
+			<img src ="garimaa.jpg" onerror="errorEvent()" />
+		</div>
+		<div>
+			<form onsubmit="submitEvent()">
+				<p>Enter name and submit the form: <input type="text" required>
+				<input type="submit"></p>
+			</form>	
+		</div>
+	</body>
+</html>
